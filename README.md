@@ -1,30 +1,29 @@
-# pyVisualizeMp3Tags
+# pyVisualizeAudioTags
 
 ## General
-pyVisualizeMp3Tags reads a folder (and all subfolders recursivelly) of mp3 files
-and gets mp3 tags to generate:
- * tag cloud of artist names (aggregated)
- * tag cloud of song lyrics (aggregated)
+pyVisualizeAudioTags reads a folder (and all subfolders recursivelly) of audio files
+and gets audio tags to generate:
+ * tag cloud of music genres (aggregated)
 
 ## Requirements and installation
-pyVisualizeMp3Tags requires Python 2.7. To install dependencies:
+pyVisualizeAudioTags requires Python 3.6. To install dependencies:
 
 ```
+virtualenv -p python3.6 wordcloud-env
+source wordcloud-env/bin/activate
+git clone https://github.com/ferencek/pyVisualizeAudioTags.git
+cd pyVisualizeAudioTags
 pip install -r requirements.txt
 ```
 
 ## Usage
 ```
-python main.py -i punk_collection -o punk.png -s -l
+python main.py -i path/to/music/ -o genres.png
 ```
 
-(use python main.py -h to see explaination of all command-line arguments)
+(use `python main.py -h` to see explanation of all command-line arguments)
 
 ## Examples
-Artist tag cloud
+Genres tag cloud
 
-![artist tag cloud example](data/punk.png)
-
-Lyrics tag cloud
-
-![lyrics tag cloud example](data/lyrics_punk.png)
+![genres tag cloud example](data/genres.png)
